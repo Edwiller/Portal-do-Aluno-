@@ -6,10 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portal do Aluno - Horários</title>
     <link rel="stylesheet" href="style.css">
+    <script src="index.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js" defer></script>
 </head>
 
 <body>
-
+    <button class="theme-toggle" id="themeToggle">
+        🌙
+    </button>
     <div class="main-container">
 
         <h1 class="main-title">Horários</h1>
@@ -120,16 +124,34 @@
                             <td></td>
                         </tr>
                     </tbody>
-                    
+
                 </table>
             </div>
 
         </div>
 
     </div>
+    <!-- MODAL -->
 
-    
-    <a href="relatorios/relatorios.html" class="back-link">Acessar relatórios</a>
+    <div class="modal" id="modal">
+
+        <div class="modal-content">
+
+            <span class="close" id="closeModal">
+                &times;
+            </span>
+
+            <h2 id="modalTitle"></h2>
+
+            <p id="modalHorario"></p>
+
+            <p id="modalProfessor"></p>
+
+            <p id="modalSala"></p>
+
+        </div>
+
+    </div>
 
 </body>
 

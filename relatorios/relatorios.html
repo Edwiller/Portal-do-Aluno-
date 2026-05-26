@@ -1,23 +1,26 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Relatórios Acadêmicos</title>
   <link rel="stylesheet" href="relatorios.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js" defer></script>
+  <script src="relatorio.js" defer></script>
 </head>
-<body>
 
+<body>
+  <button class="theme-toggle" id="themeToggle">
+    🌙
+  </button>
   <div class="main-wrapper">
-      
+
     <header class="reports-header">
       <div class="header-top-icons">
-        <a href="../index.html" class="icon-btn" aria-label="Voltar">
-          <img src="../img/icon-back.png" alt="Voltar" class="header-icon-img">
+        <a href="" class="icon-btn" aria-label="Voltar">
+          <img src="../img/icon-profile.png" class="header-icon-img">
         </a>
-        <button type="button" class="icon-btn" aria-label="Configurações">
-          <img src="../img/icon-settings.png" alt="Configurações" class="header-icon-img">
-        </button>
       </div>
       <h1 class="header-title">Relatórios Acadêmicos</h1>
       <p class="header-subtitle">Realize o download de relatórios e documentos aqui:</p>
@@ -25,9 +28,9 @@
 
     <main class="content-section">
       <h2 class="section-title">Documentos Disponíveis</h2>
-      
+
       <div class="documents-list">
-        
+
         <div class="doc-card">
           <div class="doc-info-block">
             <div class="doc-icon-wrapper">
@@ -99,12 +102,31 @@
       <button type="button" class="btn-add-more" aria-label="Adicionar documento">+</button>
       <div class="accessibility-wrapper">
         <button type="button" class="btn-accessibility" aria-label="Acessibilidade">
-          <img src="../img/icon-accessibility.png" alt="Acessibilidade" class="accessibility-icon-img">
+          <img src="../img/acessibilidade.png" alt="Acessibilidade" class="accessibility-icon-img">
         </button>
       </div>
     </footer>
 
   </div>
+  <div class="modal" id="modal">
 
+    <div class="modal-content">
+
+      <span class="close" id="closeModal">
+        &times;
+      </span>
+
+      <h2 id="modalTitle"></h2>
+
+      <p id="modalDescricao"></p>
+
+      <p id="modalFormato"></p>
+
+      <p id="modalTamanho"></p>
+
+    </div>
+
+  </div>
 </body>
+
 </html>
