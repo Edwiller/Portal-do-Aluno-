@@ -1,0 +1,266 @@
+/* ==========================================
+   1. CONFIGURAÇÕES GLOBAIS E RESPONSIVIDADE
+   ========================================== */
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    background-color: #f3f4f6;
+    /* Fundo cinza bem claro */
+    color: #111827;
+    margin: 0;
+    padding: 16px;
+    /* Espaçamento padrão no celular */
+}
+
+/* Quando a tela for de computador (largura a partir de 768px) */
+@media (min-width: 768px) {
+    body {
+        padding: 32px;
+        /* Espaçamento maior no computador */
+    }
+}
+
+.main-container {
+    max-width: 1024px;
+    margin: 0 auto;
+}
+
+.main-title {
+    font-size: 24px;
+    font-weight: bold;
+    color: #000;
+    margin-bottom: 24px;
+}
+
+@media (min-width: 768px) {
+    .main-title {
+        font-size: 30px;
+    }
+}
+
+/* ==========================================
+   2. CARTÃO DE PERFIL (Responsivo)
+   ========================================== */
+.profile-card {
+    background-color: #e5e5e5;
+    border-radius: 12px;
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    /* Celular: foto em cima, texto embaixo */
+    align-items: center;
+    gap: 24px;
+    max-width: 576px;
+    margin-bottom: 24px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+/* Quando passa para o computador, o perfil fica de lado */
+@media (min-width: 640px) {
+    .profile-card {
+        flex-direction: row;
+        /* Lado a lado */
+        align-items: flex-start;
+    }
+}
+
+.avatar-container {
+    flex-shrink: 0;
+}
+
+.avatar-icon {
+    width: 128px;
+    height: 128px;
+    border-radius: 50%;
+    object-fit: cover;
+    background-color: #fff;
+    padding: 4px;
+    border: 1px solid #d1d5db;
+}
+
+@media (min-width: 768px) {
+    .avatar-icon {
+        width: 144px;
+        height: 144px;
+    }
+}
+
+.info-container {
+    flex-grow: 1;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.info-group {
+    border-bottom: 1px solid rgba(156, 163, 175, 0.6);
+    padding-bottom: 4px;
+}
+
+.info-group:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+}
+
+.info-label {
+    font-size: 14px;
+    font-weight: bold;
+    color: #000;
+    margin: 0;
+}
+
+.info-value {
+    font-size: 14px;
+    color: #1f2937;
+    margin: 0;
+}
+
+@media (min-width: 768px) {
+    .info-value {
+        font-size: 16px;
+    }
+}
+
+.course-title {
+    font-size: 16px;
+    font-weight: bold;
+    color: #000;
+}
+
+@media (min-width: 768px) {
+    .course-title {
+        font-size: 18px;
+    }
+}
+
+/* ==========================================
+   3. CONTAINER DO CALENDÁRIO E FILTROS
+   ========================================== */
+.schedule-container {
+    background-color: #e5e5e5;
+    border-radius: 12px;
+    padding: 16px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+@media (min-width: 768px) {
+    .schedule-container {
+        padding: 24px;
+    }
+}
+
+.Filter {
+    margin-bottom: 16px;
+}
+
+.filter-title {
+    font-weight: bold;
+    font-size: 16px;
+    color: #000;
+    margin-bottom: 12px;
+}
+
+@media (min-width: 768px) {
+    .filter-title {
+        font-size: 18px;
+    }
+}
+
+.filter-controls {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    align-items: center;
+}
+
+/* Customização do Select */
+.filter-controls select {
+    padding: 6px 32px 6px 20px;
+    border: 1px solid #d1d5db;
+    border-radius: 9999px;
+    font-size: 14px;
+    font-weight: bold;
+    background-color: #fff;
+    cursor: pointer;
+    appearance: none;
+    background-image: url("data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%23000000%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13-5.4H18.4c-5%200-9.3%201.8-12.9%205.4A17.6%2017.6%200%200%200%200%2082.2c0%205%201.8%209.3%205.4%2012.9l128%20127.9c3.6%203.6%207.8%205.4%2012.8%205.4s9.2-1.8%2012.8-5.4L287%2095c3.5-3.5%205.4-7.8%205.4-12.8%200-5-1.9-9.2-5.5-12.8z%22%2F%3E%3C%2Fsvg%3E");
+    background-repeat: no-repeat;
+    background-position: right 12px center;
+    background-size: 10px auto;
+}
+
+.btn-pdf {
+    background-color: #fff;
+    border: 1px solid #d1d5db;
+    padding: 6px 20px;
+    border-radius: 9999px;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    color: #000;
+    transition: background-color 0.2s;
+}
+
+.btn-pdf:hover {
+    background-color: #f9fafb;
+}
+
+/* Responsividade da Tabela: Cria barra de rolagem horizontal se a tela for menor que a tabela */
+.table-responsive-wrapper {
+    overflow-x: auto;
+    border-radius: 8px;
+    border: 1px solid #9ca3af;
+    background-color: #fff;
+}
+
+.calendar-table {
+    width: 100%;
+    border-collapse: collapse;
+    min-wIdth: 750px;
+    /* Impede os dados de esmagarem no celular */
+}
+
+.calendar-table th,
+.calendar-table td {
+    border: 1px solid #9ca3af;
+    padding: 8px;
+    text-align: center;
+    font-size: 12px;
+    vertical-align: middle;
+    width: 14%;
+}
+
+.calendar-table th:first-child,
+.calendar-table td.time-col {
+    font-weight: bold;
+    background-color: #e2edff;
+    color: #000;
+}
+
+.calendar-table th {
+    background-color: #e2edff;
+    color: #000;
+    font-weight: bold;
+    height: 45px;
+}
+
+.calendar-table td.filled-cell {
+    background-color: #fff3a8;
+    font-weight: bold;
+    color: #000;
+    line-height: 1.3;
+}
+
+.calendar-table td.filled-cell .room {
+    font-weight: normal;
+    font-size: 11px;
+    color: #4b5563;
+}
+
+.calendar-table tbody tr.row-large {
+    height: 96px;
+}
+
+.calendar-table tbody tr.row-small {
+    height: 64px;
+}
